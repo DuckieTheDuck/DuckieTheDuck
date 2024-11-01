@@ -1,5 +1,5 @@
 ## Hi there 👋
-# Readme.md
+
 # 💫 About Me:
 🔭 I’m currently working on cool projects<br>👯 I’m looking to collaborate on anything im able to<br>🤝 I’m looking for help with dev relations<br>🌱 I’m currently a Nintendo 3DS dev <br>💬 Ask me about anything ;)
 
