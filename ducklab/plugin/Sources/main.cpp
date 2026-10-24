@@ -7,6 +7,7 @@
 
 #include <3ds.h>
 #include <CTRPluginFramework.hpp>
+#include "libctru_compat.hpp"
 
 namespace CTRPluginFramework
 {
@@ -52,10 +53,15 @@ namespace CTRPluginFramework
         // hook. DuckLab is built with libctru, so CTRPF must read the buttons
         // itself or it aborts on boot ("Fatal plugin error ... abort()").
         settings.UseGameHidMemory = false;
+
+        // Same idea for graphics: see libctru_compat.cpp.
+        LibctruCompat::Install();
     }
 
     int main(void)
     {
+        LibctruCompat::OnCtrpfReady();
+
         PluginMenu *menu = new PluginMenu("DuckLab Trainer", 0, 1, 0,
             "Lesson 1 cheats for DuckLab.\nOnly cheat in offline games!");
 

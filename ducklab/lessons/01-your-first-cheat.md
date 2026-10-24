@@ -66,7 +66,7 @@ Every CTRPF plugin comes with a built-in **memory search** tool. You'll use it t
 - **Plugin Loader is off.** Turn it on in the Rosalina menu (L + Down + SELECT).
 - **Wrong folder.** The file must be in `/luma/plugins/000400000DC1AB00/`. Check the title ID: it's all zeros except `0DC1AB`.
 - **Missing the homebrew flag.** Luma silently skips plugins for homebrew games like DuckLab unless the plugin allows it. The plugin `Makefile` sets this flag for you with `tools/allow_homebrew_load.py`. If you make a plugin with a different Makefile for a homebrew game, run that script on your `.3gx`.
-- **"Fatal plugin error ... abort()" on boot.** CTRPF tried to hook the button-reading code that retail games use, which homebrew games don't have. Set `settings.UseGameHidMemory = false;` in `PatchProcess` (the example plugin already does).
+- **"Fatal plugin error ... abort()" on boot.** CTRPF expects the button and graphics code that retail games use, and homebrew games built with libctru don't have it. The example plugin handles this: `settings.UseGameHidMemory = false;` for buttons, and `Sources/libctru_compat.cpp` for graphics. Copy both into any plugin you make for a homebrew game. Retail games don't need them.
 - **"Outdated plugin loader" message.** Update Luma3DS.
 
 ---

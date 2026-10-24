@@ -60,6 +60,7 @@ make        # DuckLabTrainer-release.3gx and -debug.3gx
 
 ## Details
 - Title ID: `000400000DC1AB00`, so plugins go in `/luma/plugins/000400000DC1AB00/`.
+- `plugin/Sources/libctru_compat.cpp` lets CTRPF run inside homebrew (libctru) games. CTRPF normally relies on code from Nintendo's SDK that only retail games have. `tools/allow_homebrew_load.py` sets the 3GX flag Luma3DS needs before it loads a plugin into a homebrew title.
 - The plugin's `3gx.ld` linker script comes from CTRPF and keeps CTRPF's license (`plugin/LICENSE-CTRPF.txt`).
 
 ## Roadmap
