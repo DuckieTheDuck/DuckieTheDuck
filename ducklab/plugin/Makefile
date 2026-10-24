@@ -119,6 +119,7 @@ $(basename $(OUTPUT)).elf : $(OFILES)
 %.3gx: %.elf
 	@echo creating $(notdir $@)
 	@3gxtool -s $^ $(TOPDIR)/$(PSF) $@
+	@python3 $(TOPDIR)/../tools/allow_homebrew_load.py $@
 
 -include $(DEPENDS)
 

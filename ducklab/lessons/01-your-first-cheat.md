@@ -62,6 +62,12 @@ Every CTRPF plugin comes with a built-in **memory search** tool. You'll use it t
 
 > CTRPF's menu labels can differ slightly between versions. If a name doesn't match, look for the closest option.
 
+### No "Plugin ready!" and SELECT does nothing?
+- **Plugin Loader is off.** Turn it on in the Rosalina menu (L + Down + SELECT).
+- **Wrong folder.** The file must be in `/luma/plugins/000400000DC1AB00/`. Check the title ID: it's all zeros except `0DC1AB`.
+- **Missing the homebrew flag.** Luma silently skips plugins for homebrew games like DuckLab unless the plugin allows it. The plugin `Makefile` sets this flag for you with `tools/allow_homebrew_load.py`. If you make a plugin with a different Makefile for a homebrew game, run that script on your `.3gx`.
+- **"Outdated plugin loader" message.** Update Luma3DS.
+
 ---
 
 ## 4. Part B: Write the cheat
