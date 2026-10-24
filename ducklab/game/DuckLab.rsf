@@ -39,6 +39,7 @@ AccessControlInfo:
   CanShareDeviceMemory          : false
   RunnableOnSleep               : false
   SpecialMemoryArrange          : false
+  MemoryType                    : Application
   SystemMode                    : 64MB
   SystemModeExt                 : Legacy
   CpuSpeed                      : 268MHz
