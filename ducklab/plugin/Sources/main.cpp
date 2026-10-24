@@ -45,9 +45,13 @@ namespace CTRPluginFramework
             MessageBox("Couldn't read that address. Is DuckLab running?")();
     }
 
-    // Runs before the game starts. Nothing to patch for DuckLab.
+    // Runs before the game starts.
     void PatchProcess(FwkSettings &settings)
     {
+        // Retail games read buttons with Nintendo's SDK code, which CTRPF can
+        // hook. DuckLab is built with libctru, so CTRPF must read the buttons
+        // itself or it aborts on boot ("Fatal plugin error ... abort()").
+        settings.UseGameHidMemory = false;
     }
 
     int main(void)
