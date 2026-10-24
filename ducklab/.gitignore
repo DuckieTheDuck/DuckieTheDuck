@@ -1,0 +1,11 @@
+# build output (prebuilt copies live in release/)
+game/build/
+game/*.3dsx
+game/*.smdh
+game/*.elf
+game/*.cia
+game/*.map
+plugin/release/
+plugin/debug/
+plugin/*.3gx
+plugin/*.elf

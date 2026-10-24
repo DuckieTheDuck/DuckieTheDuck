@@ -1,0 +1,23 @@
+Author: DuckieTheDuck
+
+Version:
+    Major: 0
+    Minor: 1
+    Revision: 0
+
+Targets: # Low half of the title ID of the game this plugin is for
+    - 0x0DC1AB00
+
+Title: DuckLab Trainer
+
+Summary: Lesson 1 cheats for DuckLab
+
+Description: |
+  Example plugin from the DuckLab lessons.
+  Edits DuckLab's Level 1 values to show how CTRPF cheats work.
+
+Compatibility: Any
+
+MemorySize: 5MiB
+
+UsePrivateMemory: false
