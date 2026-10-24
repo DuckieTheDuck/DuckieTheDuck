@@ -68,6 +68,7 @@ Every CTRPF plugin comes with a built-in **memory search** tool. You'll use it t
 - **Missing the homebrew flag.** Luma silently skips plugins for homebrew games like DuckLab unless the plugin allows it. The plugin `Makefile` sets this flag for you with `tools/allow_homebrew_load.py`. If you make a plugin with a different Makefile for a homebrew game, run that script on your `.3gx`.
 - **"Fatal plugin error ... abort()" on boot.** CTRPF expects the button and graphics code that retail games use, and homebrew games built with libctru don't have it. The example plugin handles this: `settings.UseGameHidMemory = false;` for buttons, and `Sources/libctru_compat.cpp` for graphics. Copy both into any plugin you make for a homebrew game. Retail games don't need them.
 - **"Outdated plugin loader" message.** Update Luma3DS.
+- **"Couldn't set memblock size."** Memory from an earlier plugin run is still in use, usually after a game crashed or closed badly. Turn the 3DS fully off and on again.
 
 ---
 
